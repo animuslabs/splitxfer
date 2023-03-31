@@ -1,0 +1,29 @@
+{
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build:clear": "rm -rf ../build",
+    "build": "yarn build:clear && npx proton-asc ./assembly/contract.ts && mv ./assembly/target ../build ",
+    "dev": "nodemon -w ./assembly/actions -w ./assembly/tables -w ./assembly/contract.ts -i ./assembly/target -e .ts --exec yarn build",
+    "pg": "ts-node-esm ./pg/playground.ts",
+    "types": "abi2core -i ../build/contract.abi -o ./contract.types.ts"
+  },
+  "dependencies": {
+    "proton-tsc": "^0.3.58",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@greymass/abi2core": "^1.1.0",
+    "@proton/cli": "latest",
+    "@proton/js": "^26.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules
+target
+assembly/target/*/**
+*.env*
+build

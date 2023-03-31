@@ -1,0 +1,51 @@
+Arguments: 
+  /Users/boidcom/.nvm/versions/node/v18.12.1/bin/node /Users/boidcom/.nvm/versions/node/v18.12.1/bin/yarn
+
+PATH: 
+  /Users/boidcom/.nvm/versions/node/v18.12.1/bin:/Users/boidcom/Library/Application Support/edgedb/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/boidcom/miniconda3/bin:/Users/boidcom/miniconda3/condabin:/Users/boidcom/.nvm/versions/node/v18.12.1/bin:/Users/boidcom/Library/Application Support/edgedb/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/boidcom/.cargo/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/boidcom/Dev/Alien Worlds/splitxfer/tests/package.json: Unexpected token } in JSON at position 185
+      at JSON.parse (<anonymous>)
+      at /Users/boidcom/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/boidcom/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/boidcom/.nvm/versions/node/v18.12.1/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "scripts": {
+      "test:all": "find ./ -name '*.spec.js' -not -path \"*node_modules*\" -exec ./node_modules/.bin/mocha \\{} \\;",
+      "test:deposit": "mocha -b ./deposit.spec.js",
+    },
+    "type": "module",
+    "devDependencies": {
+      "mocha": "^10.0.0"
+    },
+    "dependencies": {
+      "@greymass/eosio": "^0.6.4",
+      "@proton/vert": "^0.3.20",
+      "@types/node": "^18.7.18",
+      "chai": "^4.3.6",
+      "eslint": "^8.19.0",
+      "eslint-config-standard": "^17.0.0",
+      "eslint-plugin-import": "^2.26.0",
+      "eslint-plugin-n": "^15.2.3",
+      "eslint-plugin-promise": "^6.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

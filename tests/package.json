@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "test:all": "find ./ -name '*.spec.js' -not -path \"*node_modules*\" -exec ./node_modules/.bin/mocha \\{} \\;",
+    "test:deposit": "mocha -b ./deposit.spec.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "@greymass/eosio": "^0.6.4",
+    "@proton/vert": "^0.3.20",
+    "@types/node": "^18.7.18",
+    "chai": "^4.3.6",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
